@@ -1,17 +1,20 @@
 import React from "react";
-
 import { Paper, Typography } from "@material-ui/core";
 
 export default ({ video }) => {
 
-  if (!video) return <div>Loading...</div>;
-  // embed the url of the  specific selected videosand showthe video details below it
+  // show loading message until video value gets populated with data
+  if (!video){ 
+    return <div>Loading...</div>;
+  }
+
+  // embed the url of the  specific selected videos and show the video details below it
   const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
 
   return (
 
     <React.Fragment>
-
+      
       <Paper elevation={6} style={{ height: "70%" }}>
         <iframe
           frameBorder="0"
