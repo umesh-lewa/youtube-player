@@ -7,6 +7,7 @@ export default ({ video, onVideoSelect }) => {
   return (
 
     <Grid item xs={12}>
+
       <Paper style={{ display: "flex", alignItems: "center", cursor: "pointer" }} onClick={() => onVideoSelect(video)} >
 
         <img style={{ marginRight: "20px" }} alt="thumbnail" src={video.snippet.thumbnails.medium.url} />
@@ -16,6 +17,7 @@ export default ({ video, onVideoSelect }) => {
         </Typography>
 
       </Paper>
+
     </Grid>
 
   );
